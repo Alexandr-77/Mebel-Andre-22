@@ -118,10 +118,12 @@ button {
     color: var(--light);
 }
 .--subtitle {
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 130%;
-    color: var(--dark);   
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 112%;
+    color: var(--light);
 }
 .--text {
     font-weight: 400;
@@ -142,7 +144,7 @@ button {
     height: 995px;
     padding-top: 15px;
     position: relative;
-    margin-bottom: 200px;
+    margin-bottom: 300px;
 }
 .header::after {
     content: url(../img/header/Ellipse.png);
@@ -416,6 +418,36 @@ button {
 }
 /* ========== header /========== */
 
+/* ========== about ========== */
+
+.about__box {
+    display: flex;
+}
+.about__box-text {
+    max-width: 50%;
+}
+.about__title {
+    font-family: 'Prosto One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 37px;
+    line-height: 127%;
+    text-transform: uppercase;
+    color: var(--light);
+    margin-bottom: 80px;
+}
+.about__subtitle {
+    padding-right: 16px;
+}
+.about__box-image {
+
+}
+/* ========== about /========== */
+
+
+
+
+
 
 
 /* ========== footer ========== */
@@ -672,6 +704,10 @@ button {
     .header {
         position: relative;
         background: #000000 url(../img/header/header-bg.png) 100% 0 / 70% no-repeat;
+        margin-bottom: 220px;
+    }
+    .header::after {
+        bottom: 0;
     }
     .header__block-nav {
         position: absolute;
@@ -707,12 +743,16 @@ button {
         top: 20px;
         right: 15px;
     }
+    
 
 }
 /* ====== Медиа 1140px /====== */
 
 /* ====== Медиа 998px ====== */
 @media (max-width: 998px) {
+    .header {
+        margin-bottom: 30px;
+    }
     .header__main-title {
         font-size: 40px;
     }
@@ -721,6 +761,17 @@ button {
     }
     .header__main-text2 {
         font-size: 23px;
+    }
+    .about__box {
+        flex-direction: column;
+    }
+    .about__box-image {
+        display: flex;
+        justify-content: center;
+        margin-top: 60px;
+    }
+    .about__box-text {
+        max-width: 100%;
     }
 }
 /* ====== Медиа 998px /====== */
@@ -746,6 +797,17 @@ button {
 }
 /* ====== Медиа 768px /====== */
 
+/* ====== Медиа 600px ====== */
+@media (max-width: 600px) {
+    .header::after {
+        bottom: -85px;
+    }
+    .header {
+        margin-bottom: 75px;
+    }
+}
+/* ====== Медиа 600px /====== */
+
 /* ====== Медиа 550px ====== */
 @media (max-width: 550px) {
     .header__main-box {
@@ -761,6 +823,15 @@ button {
         content: url(../img/header/arrou-top-tel.svg);
         top: -30px;
         left: 20px;
+    }
+    .about__title {
+        font-size: 7.5vw;
+        line-height: 140%;
+        margin-bottom: 30px;
+    }
+    .about__subtitle {
+        padding-right: 0;
+        font-size: 6vw;
     }
 }
 /* ====== Медиа 550px /====== */
@@ -786,7 +857,6 @@ button {
     }
     .header::after {
         content: url(../img/header/Ellipse2.png);
-        bottom: -70px;
     }
     .header__logo {
         width: 60px;
@@ -807,7 +877,9 @@ button {
         font-size: 13px;
         padding: 20px 90px;
     }
-    
+    .about__box-image {
+        margin-top: 30px;
+    }
     .footer__block {
         padding: 50px 0 160px;
     }
