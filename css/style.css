@@ -169,8 +169,10 @@ button {
 }
 .header__ul-li a {
     font-family: 'Prosto One';
+    font-style: normal;
     font-weight: 400;
     font-size: 15px;
+    line-height: 112%;
     color: var(--light);
     text-transform: uppercase;
     position: relative;
