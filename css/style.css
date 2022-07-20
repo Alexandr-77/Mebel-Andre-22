@@ -60,7 +60,6 @@
     --light: #ffffff; 
     --dark: #000000; 
     --secondary: #6D655C; 
-    
 
     --trans: transparent; 
 
@@ -439,10 +438,141 @@ button {
 .about__subtitle {
     padding-right: 16px;
 }
-.about__box-image {
+
+/* ========== about /========== */
+
+/* ========== slyder ========== */
+.slyder {
+    background: url(../img/slyder/slyder-fon.png)  50% 0 / cover no-repeat;
+    min-height: 900px;
+    margin-top: 100px;
+    padding-bottom: 150px;
+    position: relative;
+}
+.slyder::before {
+    position: absolute;
+    content: '';
+    background: url(../img/slyder/slyder-elips.png) 0 0 / contain no-repeat;
+    display: block;
+    width: 158px;
+    height: 260px;
+    top: 188px;
+    left: 0;
+    z-index: 3;
+} 
+.slyder__title {
+    padding-top: 150px;
+    margin: 0 0 30px;
+    text-align: center;
+}
+.slyder__subtitle {
+    text-align: center;
+    margin-bottom: 130px;
+}
+.slyder__box {
+    margin-bottom: 80px;
+    /* display: flex !important;
+    gap: 15px; */
+}
+.slyder__box-item {
+    margin: 0 15px;
+}
+.slyder__box-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* -------- */
+.slick-prev, .slick-next {
+    width: 20px;
+    height: 20px;
+    color: transparent;
+    background: transparent;
+    top: -50px;
 
 }
-/* ========== about /========== */
+.slick-prev {
+    left: auto;
+    right: 150px;
+}
+.slick-next {
+    right: 100px;
+}
+.slick-prev:before, .slick-next:before {
+    font-size: 26px;
+    opacity: .75;
+    color: white;
+    background: linear-gradient(180deg, #D7BFA6 0%, #696156 100%);
+    padding: 0px 7px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.slick-prev:before {
+    content: '<';
+    padding-right: 9px;
+}
+.slick-next:before {
+    content: '>';
+    padding-left: 9px;
+}
+.slyder__subtitle-bottom {
+    max-width: 970px;
+    margin: 0 auto;
+}
+.slyder__block {
+    padding: 20px 50px;
+    background: var(--light);
+    margin-top: 82px;
+    margin: 82px auto 0;
+    display: block;
+    max-width: 1050px;
+    border-radius: 50px;
+    position: relative;
+    z-index: 1;
+}
+.slyder__block-text {
+    color: var(--dark);
+    margin-bottom: 30px;
+    text-align: center;
+}
+.slyder__link {
+    font-family: 'Prosto One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 112%;
+    text-align: center;
+    text-transform: uppercase;
+    width: 260px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    background: var(--secondary);
+    color: var(--light);
+    border-radius: 15px;
+}
+
+/* ========== slyder /========== */
+
+/* ========== black--rad ========== */
+.black--rad {
+    margin-top: -345px;
+    background: url(../img/materials/materials-bg.png) 50% 0 / cover no-repeat;
+    min-height: 360px;
+    position: relative;
+    z-index: 0;
+}
+/* ========== black--rad /========== */
+
+/* ========== .materials ========== */
+
+
+/* ========== .materials /========== */
 
 
 
@@ -683,7 +813,9 @@ button {
 
 /* ====== Медиа 1380px ====== */
 @media (max-width: 1380px) {
-
+    .slyder::before {
+        top: 40px;
+    }
 }
 /* ====== Медиа 1380px /====== */
 
@@ -773,6 +905,9 @@ button {
     .about__box-text {
         max-width: 100%;
     }
+    .slyder::before {
+        top: -25px;
+    }
 }
 /* ====== Медиа 998px /====== */
 
@@ -793,6 +928,18 @@ button {
     }
     .footer__input {
         width: 48%;
+    }
+    .--title {
+        font-size: 8vw;
+    }
+    .--subtitle {
+        font-size: 4vw;
+    }
+    .slick-next {
+        right: 30px;
+    }
+    .slick-prev {
+        right: 80px;
     }
 }
 /* ====== Медиа 768px /====== */
@@ -832,6 +979,16 @@ button {
     .about__subtitle {
         padding-right: 0;
         font-size: 6vw;
+    }
+    .--subtitle {
+        font-size: 5vw;
+    }
+    .slyder::before {
+        top: -50px;
+    }
+    .slyder::before {
+        width: 158px;
+        height: 180px;
     }
 }
 /* ====== Медиа 550px /====== */
@@ -879,6 +1036,51 @@ button {
     }
     .about__box-image {
         margin-top: 30px;
+    }
+    .slyder {
+        background: url(../img/slyder/slyder-fon-mob.png)  50% 0 / cover no-repeat;
+        margin-top: 65px;
+    }
+    .slyder::before {
+        top: -15px;
+    }
+    .slyder__title {
+        padding-top: 75px;
+        margin: 0 0 20px;
+    }
+    .slyder__subtitle {
+        margin-bottom: 70px;
+        text-align: left;
+    }
+    .slyder__box-item {
+        margin: 0 5px;
+    }
+    .slick-prev, .slick-next {
+        top: -38px;
+    }
+    .slyder::before {
+        width: 60px;
+        height: 125px;
+    }
+    .slick-prev {
+        right: 70px;
+    }
+    .slyder__box {
+        margin-bottom: 15px;
+    }
+    .slyder__block {
+        padding: 30px 15px;
+        background: var(--light);
+        margin-top: 82px;
+        margin: 35px auto 0;
+    }
+    .slyder__block-text {
+        font-size: 4.5vw;
+    }
+    .slyder__link {
+        font-size: 13px;
+        width: 260px;
+        height: 60px;
     }
     .footer__block {
         padding: 50px 0 160px;
