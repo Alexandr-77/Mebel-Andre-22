@@ -605,6 +605,9 @@ button {
     width: 45%;
     list-style: inside;
 }
+.materials__slyder img {
+    margin: 0 15px;
+}
 /* ========== materials /========== */
 
 
@@ -1039,6 +1042,9 @@ button {
         position: relative;
         z-index: 1;
     }
+    .materials__slyder img {
+        margin: 0 7px;
+    }
 }
 /* ====== Медиа 550px /====== */
 
@@ -1138,6 +1144,31 @@ button {
         margin-bottom: 35px;
         font-size: 16px;
     }
+    .materials__box {
+        margin-bottom: 50px;
+    }
+    /* 2слайдер */
+    .materials .slick-prev, .materials .slick-next {
+        top: auto;
+        bottom: -60px;
+    }
+    .materials .slick-prev {
+        right: auto;
+        left: calc(50% - 35px) ;
+    }
+    .materials .slick-next {
+        left: auto;
+        right: calc(50% - 35px) ;
+    }
+
+    .materials__slyder {
+        margin-bottom: 85px;
+    }
+
+
+
+
+
     .footer__block {
         padding: 50px 0 160px;
     }
