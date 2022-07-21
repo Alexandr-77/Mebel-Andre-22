@@ -573,6 +573,7 @@ button {
 /* ========== materials ========== */
 .materials {
     color: var(--light);
+    padding-bottom: 60px;
 }
 
 .materials__title {
