@@ -79,7 +79,8 @@
 }
 body {
     font-family: 'Raleway', sans-serif;
-    background: var(--dark);
+    /* background: var(--dark); */
+    background: #0A0A0A;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -569,10 +570,42 @@ button {
 }
 /* ========== black--rad /========== */
 
-/* ========== .materials ========== */
+/* ========== materials ========== */
+.materials {
+    color: var(--light);
+}
 
-
-/* ========== .materials /========== */
+.materials__title {
+    margin-bottom: 43px;
+}
+.materials__text {
+    font-family: 'Gilroy';
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 125.5%;
+    max-width: 693px;
+    margin-bottom: 53px;
+}
+.materials__text span {
+    font-weight: 700;
+}
+.materials__box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 50px;
+    margin-bottom: 135px;
+}
+.materials__box-item {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 175%;
+    text-transform: uppercase;
+    width: 45%;
+    list-style: inside;
+}
+/* ========== materials /========== */
 
 
 
@@ -908,6 +941,9 @@ button {
     .slyder::before {
         top: -25px;
     }
+    .materials__box-item {
+        width: 100%;
+    }
 }
 /* ====== Медиа 998px /====== */
 
@@ -989,6 +1025,19 @@ button {
     .slyder::before {
         width: 158px;
         height: 180px;
+    }
+    .materials__box-item {
+        font-size: 4.3vw;
+    }
+    .materials__text {
+        font-size: 5vw;
+        line-height: 135%;
+    }
+    .materials {
+        color: var(--light);
+        margin-top: -100px;
+        position: relative;
+        z-index: 1;
     }
 }
 /* ====== Медиа 550px /====== */
@@ -1081,6 +1130,13 @@ button {
         font-size: 13px;
         width: 260px;
         height: 60px;
+    }
+    .materials__title {
+        margin-bottom: 20px;
+    }
+    .materials__text {
+        margin-bottom: 35px;
+        font-size: 16px;
     }
     .footer__block {
         padding: 50px 0 160px;
