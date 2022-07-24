@@ -60,7 +60,8 @@
     --light: #ffffff; 
     --dark: #000000; 
     --secondary: #6D655C; 
-
+    --secondary-light: #978E85; 
+    --secondary-tt: #6D655C; 
     --trans: transparent; 
 
     --danger: #961914; 
@@ -69,7 +70,7 @@
     --danger-light: #EAD1D0;
     --danger-light-s: #FFF4F3;
     
-    --secondary-light: #9F9E9D; 
+    
 } 
 
 *{
@@ -810,6 +811,119 @@ button {
 }
 /* ========== work /========== */
 
+/* ========== benefits ========== */
+.benefits {
+    position: relative;
+    padding: 17px 0 250px;
+}
+.benefits::before {
+    content: '';
+    background: url(../img/benefits/benefits-bg.png) 50% 0 / cover no-repeat;
+    min-height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+}
+.benefits::after {
+    content: '';
+    background: url(../img/benefits/elips-bottom.png) 0 0 / cover no-repeat;
+    height: 218px;
+    width: 125px;
+    position: absolute;
+    z-index: 1;
+    bottom: 120px;
+}
+.benefits__block {
+    /* display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    background: var(--darky);
+    align-items: flex-start;
+    gap: 38px; */
+
+    display: flex;
+    gap: 38px 0px;
+}
+.benefits__block-item {
+    background: var(--darky);
+}
+/* ========== benefits /========== */
+
+/* ========== cart ========== */
+.cart {
+    padding: 50px 0 180px;
+    background: var(--secondary-light);
+}
+.cart__title {
+    text-align: center;
+}
+.cart__box {
+    display: flex;
+    margin-top: 123px;
+    gap: 90px 30px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.cart__box-item {
+    width: 280px;
+    /* overflow: hidden; */
+    position: relative;
+    /* border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px; */
+}
+.cart__box-item::before {
+    position: absolute;
+    content: '';
+    background: url(../img/cart/cart-befor.png) 50% 0 / cover no-repeat;
+    bottom: -40px;
+    width: 280px;
+    height: 30px;
+    z-index: 1;
+}
+.cart__box-image {
+    height: 223px;
+    overflow: hidden;
+    border-radius: 25px 25px 0 0;
+    -webkit-border-radius: 25px 25px 0 0;
+    -moz-border-radius: 25px 25px 0 0;
+    -ms-border-radius: 25px 25px 0 0;
+    -o-border-radius: 25px 25px 0 0;
+}
+.cart__box-image img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.cart__box-text {
+    padding: 19px 15px;
+    background: var(--secondary-tt);
+    min-height: 111px;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 0 0 25px 25px;
+    -webkit-border-radius: 0 0 25px 25px;
+    -moz-border-radius: 0 0 25px 25px;
+    -ms-border-radius: 0 0 25px 25px;
+    -o-border-radius: 0 0 25px 25px;
+}
+.cart__text {
+    font-family: 'Prosto One';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 127%;
+    text-transform: uppercase;
+    color: var(--light);
+}
+
+
+
+
+/* ========== cart /========== */
+
 
 
 
@@ -1060,6 +1174,9 @@ button {
     .work__box-item:nth-child(1)::before {
         top: 36px;
     }
+    .cart__title {
+        font-size: 4.6vw;
+    }
 }
 /* ====== Медиа 1200px /====== */
 
@@ -1201,7 +1318,15 @@ button {
         left: 0;
         font-size: 200px;
     }
-
+    .benefits {
+        padding: 17px 0 150px;
+    }
+    .benefits::after {
+        bottom: 0;
+    }
+    .cart__box {
+        justify-content: space-evenly;
+    }
 }
 /* ====== Медиа 998px /====== */
 
@@ -1319,7 +1444,9 @@ button {
         margin-top: 26px;
         font-size: 13px;
     }
-
+    .cart__title {
+        font-size: 7vw;
+    }
 
 
     .footer__block-form {
@@ -1412,8 +1539,29 @@ button {
     .materials__slyder img {
         margin: 0 7px;
     }
+    .work {
+        padding-bottom: 10px;
+    }
     .work__subtitile br {
         display: none;
+    }
+    .benefits {
+        padding: 135px 0 250px;
+    }
+    .benefits::before {
+        background: url(../img/benefits/benefits-bg-mob.png) 50% 0 / cover no-repeat;
+        z-index: -1;
+        top: 0;
+    }
+    .benefits__block {
+        flex-direction: column;
+    }
+    .benefits__image {
+        margin: 0 auto;
+        padding-left: 2.5%;
+    }
+    .benefits::after {
+        bottom: 130px;
     }
 }
 /* ====== Медиа 550px /====== */
@@ -1545,8 +1693,21 @@ button {
         height: 197px;
         bottom: -227px;
     }
-
-
+    .benefits::after {
+        height: 180px;
+        width: 100px;
+        bottom: 40px;
+    }
+    .benefits {
+        padding: 135px 0 120px;
+    }
+    .cart__box {
+        margin-top: 69px;
+        gap: 75px 30px;
+    }
+    .cart {
+        padding: 50px 0 44px;
+    }
 
     .footer__block {
         padding: 50px 0 160px;
