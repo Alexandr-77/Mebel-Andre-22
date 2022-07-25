@@ -852,7 +852,7 @@ button {
 
 /* ========== cart ========== */
 .cart {
-    padding: 50px 0 180px;
+    padding: 50px 0 530px;
     background: var(--secondary-light);
 }
 .cart__title {
@@ -919,11 +919,46 @@ button {
     color: var(--light);
 }
 
-
-
-
 /* ========== cart /========== */
 
+/* ========== visual ========== */
+
+.visual__block {
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+
+}
+
+/* ========== visual /========== */
+.visual {
+    position: relative;
+    z-index: 0;
+}
+.visual::before {
+    position: absolute;
+    content: '';
+    background: url(../img/visual/visual-bg.png) 50% 0 / cover no-repeat;
+    top: -350px;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+.visual__title {
+    text-align: center;
+    margin-bottom: 80px;
+}
+.visual__video {
+    width: 100%;
+    cursor: pointer;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+}
 
 
 
@@ -1174,8 +1209,14 @@ button {
     .work__box-item:nth-child(1)::before {
         top: 36px;
     }
+    .cart {
+        padding: 50px 0 400px;
+    }
     .cart__title {
         font-size: 4.6vw;
+    }
+    .visual::before {
+        top: -230px;
     }
 }
 /* ====== Медиа 1200px /====== */
@@ -1447,7 +1488,9 @@ button {
     .cart__title {
         font-size: 7vw;
     }
-
+    .visual__title {
+        font-size: 7vw;
+    }
 
     .footer__block-form {
         max-width: 100%;
@@ -1469,6 +1512,12 @@ button {
     }
     .header {
         margin-bottom: 75px;
+    }
+    .cart {
+        padding: 50px 0 280px;
+    }
+    .visual::before {
+        top: -150px;
     }
 }
 /* ====== Медиа 600px /====== */
@@ -1705,10 +1754,12 @@ button {
         margin-top: 69px;
         gap: 75px 30px;
     }
-    .cart {
-        padding: 50px 0 44px;
+    .visual::before {
+        top: -90px;
     }
-
+    .visual__title {
+        margin-bottom: 55px;
+    }
     .footer__block {
         padding: 50px 0 160px;
     }
