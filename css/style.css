@@ -133,7 +133,7 @@ button {
 /* ======================================= */
 /* ========== header ========== */
 .header {
-    background: #000000 url(../img/header/header-bg.png) 100% 0 / contain no-repeat;
+    background: #0A0A0A url(../img/header/header-bg.png) 100% 0 / contain no-repeat;
     height: 100vh;
     height: 995px;
     padding-top: 15px;
@@ -151,6 +151,20 @@ button {
     justify-content: space-between;
     align-items: center;
     gap: 50px;
+}
+.header__fix {
+    position: relative;
+}
+.header__fix::before {
+    position: fixed;
+    content: '';
+    background: url(../img/fix.svg) 50% 0 / 100% no-repeat;
+    width:  80px;
+    height: 80px;
+    bottom: 50px;
+    right: 3%;
+    z-index: 5;
+    cursor: pointer;
 }
 .header__block-logo {
     width: 100px;
@@ -1592,7 +1606,12 @@ button {
     .footer::before {
         top: -155px;
     }
-
+    .header__fix::before {
+        width: 50px;
+        height: 50px;
+        bottom: 30px;
+        right: 5%;
+    }
 }
 /* ====== Медиа 768px /====== */
 
