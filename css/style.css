@@ -135,7 +135,7 @@ button {
 .header {
     background: #0A0A0A url(../img/header/header-bg.png) 100% 0 / contain no-repeat;
     height: 100vh;
-    height: 995px;
+    min-height: 995px;
     padding-top: 15px;
     position: relative;
     margin-bottom: 300px;
@@ -320,7 +320,7 @@ button {
 .header__main-grup-image {
     display: flex;
     gap: 50px;
-    margin-bottom: 33px;
+    margin-bottom: 50px;
 }
 .header__main-image {
     width: 55px;
@@ -350,7 +350,7 @@ button {
     margin-bottom: 58px;
 }
 .header__main-text2 span {
-    font-weight: 900;
+    font-weight: 700;
 }
 .header__main-box {
     display: flex;
@@ -424,7 +424,7 @@ button {
     background: url(../img/slyder/slyder-fon.png)  50% 0 / cover no-repeat;
     min-height: 900px;
     margin-top: 100px;
-    padding-bottom: 150px;
+    padding-bottom: 230px;
     position: relative;
 }
 .slyder::before {
@@ -536,17 +536,19 @@ button {
 }
 
 /* ========== slyder /========== */
-
-/* ========== black--rad ========== */
-.black--rad {
-    margin-top: -345px;
-    background: url(../img/materials/materials-bg.png) 50% 0 / cover no-repeat;
-    min-height: 360px;
+/* ========== materials ========== */
+.materials--vrap {
     position: relative;
+}
+.materials--vrap::before {
+    content: '';
+    margin-top: -430px;
+    background: url(../img/materials/materials-bg.png) 50% 0 / cover no-repeat;
+    height: 100%;
+    width: 100%;
+    position: absolute;
     z-index: 0;
 }
-/* ========== black--rad /========== */
-
 /* ========== materials ========== */
 .materials {
     color: var(--light);
@@ -790,7 +792,7 @@ button {
 /* ========== benefits ========== */
 .benefits {
     position: relative;
-    padding: 17px 0 250px;
+    padding: 170px 0 250px;
 }
 .benefits::before {
     content: '';
@@ -828,7 +830,7 @@ button {
 
 /* ========== cart ========== */
 .cart {
-    padding: 50px 0 530px;
+    padding: 50px 0 630px;
     background: var(--secondary-light);
 }
 .cart__title {
@@ -843,13 +845,19 @@ button {
 }
 .cart__box-item {
     width: 280px;
-    /* overflow: hidden; */
     position: relative;
-    /* border-radius: 25px;
-    -webkit-border-radius: 25px;
-    -moz-border-radius: 25px;
-    -ms-border-radius: 25px;
-    -o-border-radius: 25px; */
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+.cart__box-item:hover {
+    transform: scale(1.06);
+    -webkit-transform: scale(1.06);
+    -moz-transform: scale(1.06);
+    -ms-transform: scale(1.06);
+    -o-transform: scale(1.06);
 }
 .cart__box-item::before {
     position: absolute;
@@ -907,7 +915,7 @@ button {
     position: absolute;
     content: '';
     background: url(../img/visual/visual-bg.png) 50% 0 / cover no-repeat;
-    top: -350px;
+    top: -430px;
     width: 100%;
     height: 100%;
     z-index: -1;
@@ -1431,7 +1439,7 @@ button {
         font-size: 200px;
     }
     .benefits {
-        padding: 17px 0 150px;
+        padding: 170px 0 150px;
     }
     .benefits::after {
         bottom: 0;
@@ -1666,6 +1674,9 @@ button {
     .slyder::before {
         width: 158px;
         height: 180px;
+    }
+    .materials--vrap::before {
+        margin-top: -330px;
     }
     .materials::after {
         width: 93px;
