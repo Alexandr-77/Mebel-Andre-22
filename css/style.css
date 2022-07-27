@@ -1040,6 +1040,16 @@ button {
     height: 100%;
     z-index: -1;
 }
+.footer::after {
+    position: absolute;
+    content: '';
+    background: url(../img/footer/footer-elips-rig.png) 50% 0 / 100% no-repeat;
+    top: -125px;
+    right: 0;
+    width: 263px;
+    height: 400px;
+    z-index: 0;
+}
 .footer__block {
     display: flex;
     justify-content: space-between;
@@ -1238,6 +1248,11 @@ button {
         width: 150px;
         height: 220px;
    }
+   .footer::after {
+        top: -224px;
+        width: 212px;
+        height: 345px;
+    }
 }
 /* ====== Медиа 1380px /====== */
 
@@ -1346,6 +1361,11 @@ button {
      }
     .footer__block-form {
         margin: 0 auto 100px;
+    }
+    .footer::after {
+        top: -130px;
+        width: 150px;
+        height: 261px;
     }
 }
 /* ====== Медиа 1140px /====== */
@@ -1576,7 +1596,11 @@ button {
     .visual__title {
         font-size: 7vw;
     }
-
+    .footer::after {
+        top: -146px;
+        width: 105px;
+        height: 165px;
+    }
     .footer__block-form {
         width: 100%;
     }
@@ -1918,10 +1942,10 @@ button {
    .footer__grup-icon {
     align-items: flex-start;
     flex-direction: column;
-   }
+    }
    .footer__btn {
     font-size: 13px;
-}
+    }
 
 }
 /* ====== Медиа 450px /====== */
@@ -1939,6 +1963,11 @@ button {
     .work__link {
         width: 100%;
         height: 54px;
+    }
+    .footer::after {
+        top: -146px;
+        width: 85px;
+        height: 144px;
     }
 }
 /* ====== Медиа 400px /====== */
