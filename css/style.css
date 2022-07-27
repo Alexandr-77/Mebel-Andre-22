@@ -1050,6 +1050,19 @@ button {
     height: 400px;
     z-index: 0;
 }
+.footer__elip-left {
+    position: relative;
+}
+.footer__elip-left::before {
+    position: absolute;
+    content: '';
+    background: url(../img/footer/footer-elips-left.png) 50% 0 / 100% no-repeat;
+    top: -172px;
+    left: 0;
+    width: 108px;
+    height: 213px;
+    z-index: 0;
+}
 .footer__block {
     display: flex;
     justify-content: space-between;
@@ -1193,16 +1206,6 @@ button {
 }
 .footer__box-checked {
     display: flex;
-}
-.checkbox {
-    width: 16px;
-    height: 16px;
-}
-.footer__box-checked label {
-    margin-left: 8px;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 140%;
 }
 .footer__btn {
     font-family: 'Prosto One';
@@ -1600,6 +1603,10 @@ button {
         top: -146px;
         width: 105px;
         height: 165px;
+    }
+    .footer__elip-left,
+    .footer__elip-left::before {
+        display: none;
     }
     .footer__block-form {
         width: 100%;
