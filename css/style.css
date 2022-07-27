@@ -1044,6 +1044,22 @@ button {
     display: flex;
     gap: 19px;
 }
+.footer__box-icon a {
+    margin-top: -3px;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+}
+.footer__box-icon a:hover {
+    margin-top: -5px;
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
 
 .footer__title {
     color: var(--light);
@@ -1196,9 +1212,6 @@ button {
     background: var(--secondary-hov);
 }
 /* ========== footer /========== */
-
-
-
 
 
 /* ========= Медиа ========= */
