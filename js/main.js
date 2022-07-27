@@ -3,8 +3,6 @@ let burger = document.querySelector('.burger');
 
 let nav = document.querySelector('.header__block-nav');
 
-
-
 burgerBlock.addEventListener('click', miFunction);
 
 function miFunction() {
@@ -27,18 +25,11 @@ $('.slyder__box').slick({
   slidesToScroll: 1,
   responsive: [
     {
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        infinite: true,
-      }
-    },
-    {
       breakpoint: 600,
       settings: {
         slidesToShow: 2,
-        slidesToScroll: 2
+        slidesToScroll: 1,
+        infinite: true,
       }
     },
     {
@@ -61,18 +52,11 @@ $('.materials__slyder').slick({
   slidesToScroll: 1,
   responsive: [
     {
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        infinite: true,
-      }
-    },
-    {
       breakpoint: 600,
       settings: {
         slidesToShow: 2,
-        slidesToScroll: 2
+        slidesToScroll: 2,
+        infinite: true,
       }
     },
     {
