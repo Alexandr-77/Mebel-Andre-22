@@ -1766,7 +1766,7 @@ button {
         padding-top: 10px;
     }
     .header {
-        background: url(../img/header/header-bg-mob.png) 100% 0 / 70% no-repeat;
+        background: url(../img/header/header-bg-mob.webp) 100% 0 / 70% no-repeat;
     }
     .header::after {
         content: url(../img/header/Ellipse2.png);
