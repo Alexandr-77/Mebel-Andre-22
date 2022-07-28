@@ -424,7 +424,6 @@ button {
     background: url(../img/slyder/slyder-fon.png)  50% 0 / cover no-repeat;
     min-height: 900px;
     margin-top: 100px;
-    padding-bottom: 230px;
     position: relative;
 }
 .slyder::before {
@@ -536,8 +535,9 @@ button {
 }
 
 /* ========== slyder /========== */
+
 /* ========== materials ========== */
-.materials--vrap {
+/* .materials--vrap {
     position: relative;
 }
 .materials--vrap::before {
@@ -548,19 +548,32 @@ button {
     width: 100%;
     position: absolute;
     z-index: 0;
+} */
+.materials--vrap {
+    background: #978E85;
 }
 /* ========== materials ========== */
 .materials {
     color: var(--light);
+    background: url(../img/materials/materials-bg.png) 50% 0 / cover no-repeat;
+    min-height: 900px;
+    margin-top: -160px;
     position: relative;
 }
+
+
+
+/* .materials {
+    color: var(--light);
+    position: relative;
+} */
 .materials::before {
     position: absolute;
     content: '';
     background: url(../img/materials/elips-right.png) 0 0 / cover no-repeat;
-    width: 190px;
-    height: 260px;
-    top: 0;
+    width: 150px;
+    height: 200px;
+    top: 360px;
     right: 0;
 }
 .materials::after {
@@ -575,6 +588,7 @@ button {
 
 .materials__title {
     margin-bottom: 43px;
+    padding-top: 375px;
 }
 .materials__text {
     font-family: 'Gilroy';
@@ -830,7 +844,7 @@ button {
 
 /* ========== cart ========== */
 .cart {
-    padding: 50px 0 630px;
+    padding: 50px 0 180px;
     background: var(--secondary-light);
 }
 .cart__title {
@@ -906,31 +920,28 @@ button {
 /* ========== cart /========== */
 
 /* ========== visual ========== */
+.visual--vrap {
+    background: #978E85;
+}
 
 .visual {
     position: relative;
+    background: url(../img/visual/visual-bg.png) 50% 0 / cover no-repeat;
     z-index: 0;
 }
-.visual::before {
-    position: absolute;
-    content: '';
-    background: url(../img/visual/visual-bg.png) 50% 0 / cover no-repeat;
-    top: -430px;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-}
+
 .visual::after {
     position: absolute;
     content: '';
     background: url(../img/visual/elips.png) 50% 0 / cover no-repeat;
-    top: 650px;
+    top: 860px;
     width: 180px;
     height: 220px;
     z-index: 0;
 }
 .visual__title {
     text-align: center;
+    padding-top: 180px;
     margin-bottom: 80px;
 }
 .visual__block {
@@ -966,7 +977,7 @@ button {
 }
 .visual__box {
     display: flex;
-    padding-bottom: 400px;
+    padding-bottom: 120px;
 }
 .visual__box-item {
     width: 50%;
@@ -1015,21 +1026,14 @@ button {
     background: var(--secondary-light);
     color: var(--light);
     position: relative;
-}
-.footer::before {
-    position: absolute;
-    content: '';
-    background: url(../img/footer/footer-bg.png) 50% 0 / 100% no-repeat;
-    top: -345px;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
+    background: url(../img/footer/footer-bg.png) 50% 0 / cover no-repeat;
+    min-height: 800px;
 }
 .footer::after {
     position: absolute;
     content: '';
     background: url(../img/footer/footer-elips-rig.png) 50% 0 / 100% no-repeat;
-    top: -125px;
+    top: 0;
     right: 0;
     width: 263px;
     height: 400px;
@@ -1085,6 +1089,7 @@ button {
 
 .footer__title {
     color: var(--light);
+    padding-top: 177px;
 }
 .footer__box-address {
     display: flex;
@@ -1247,12 +1252,10 @@ button {
         top: 40px;
     }
     .visual::after {
-        top: 675px;
         width: 150px;
         height: 220px;
    }
    .footer::after {
-        top: -224px;
         width: 212px;
         height: 345px;
     }
@@ -1265,16 +1268,10 @@ button {
         top: 36px;
     }
     .cart {
-        padding: 50px 0 400px;
+        padding: 0px 0 180px;
     }
     .cart__title {
         font-size: 4.6vw;
-    }
-    .visual::before {
-        top: -230px;
-    }
-    .footer::before {
-        top: -225px;
     }
 }
 /* ====== Медиа 1200px /====== */
@@ -1350,6 +1347,16 @@ button {
     .work__box-item {
         margin-bottom: 180px;
     }
+    .materials__title {
+        padding-top: 320px;
+    }
+    .visual {
+        background: url(../img/visual/visual-bg-mob.png) 50% 0 / cover no-repeat;
+    }
+    .footer {
+        background: url(../img/footer/footer-bg-mob.png) 50% 0 / cover no-repeat;
+        min-height: 800px;
+    }
     .footer__block {
         padding: 80px 0 60px;
         flex-direction: column-reverse;
@@ -1366,7 +1373,6 @@ button {
         margin: 0 auto 100px;
     }
     .footer::after {
-        top: -130px;
         width: 150px;
         height: 261px;
     }
@@ -1450,6 +1456,9 @@ button {
     .visual {
         margin-bottom: 370px;
     }
+    .visual::after {
+        display: none;
+    }
     .visual__box {
         display: flex;
         padding-bottom: 100px;
@@ -1507,10 +1516,10 @@ button {
         right: 80px;
     }
     .materials::before {
-        width: 190px;
-        height: 260px;
-        top: -266px;
-        z-index: 5;
+        top: 310px;
+    }
+    .work {
+        padding-bottom: 0px;
     }
     .work::before {
         content: none;
@@ -1591,16 +1600,13 @@ button {
     .cart__title {
         font-size: 7vw;
     }
-    .visual::after {
-        top: 540px;
-        width: 103px;
-        height: 150px;
+    .visual__title {
+        padding-top: 120px;
     }
     .visual__title {
         font-size: 7vw;
     }
     .footer::after {
-        top: -146px;
         width: 105px;
         height: 165px;
     }
@@ -1610,9 +1616,6 @@ button {
     }
     .footer__block-form {
         width: 100%;
-    }
-    .footer::before {
-        top: -155px;
     }
     .header__fix::before {
         width: 50px;
@@ -1630,12 +1633,6 @@ button {
     }
     .header {
         margin-bottom: 75px;
-    }
-    .cart {
-        padding: 50px 0 280px;
-    }
-    .visual::before {
-        top: -150px;
     }
 }
 /* ====== Медиа 600px /====== */
@@ -1675,15 +1672,16 @@ button {
         width: 158px;
         height: 180px;
     }
-    .materials--vrap::before {
-        margin-top: -330px;
-    }
     .materials::after {
         width: 93px;
         height: 189px;
         bottom: auto;
-        top: -158px;
+        top: 117px;
         left: 0;
+        z-index: 1;
+    }
+    .materials {
+        margin-top: -200px;
     }
     .materials::before {
         background: url(../img/materials/elips-right-mobil.png) 0 0 / cover no-repeat;
@@ -1693,6 +1691,9 @@ button {
         bottom: -238px;
         right: 0;
     }
+    .materials__title {
+        padding-top: 390px;
+    }
     .materials__box-item {
         font-size: 3.5vw;
     }
@@ -1700,17 +1701,8 @@ button {
         font-size: 5vw;
         line-height: 135%;
     }
-    .materials {
-        color: var(--light);
-        margin-top: -100px;
-        position: relative;
-        z-index: 1;
-    }
     .materials__slyder img {
         margin: 0 7px;
-    }
-    .work {
-        padding-bottom: 10px;
     }
     .work__subtitile br {
         display: none;
@@ -1734,11 +1726,9 @@ button {
         bottom: 130px;
     }
     .visual {
-        margin-bottom: 265px;
+        margin-bottom: 150px;
     }
-    .footer::before {
-        top: -128px;
-    }    .footer__block {
+    .footer__block {
         padding: 80px 0 25px;
         flex-direction: column-reverse;
     }
@@ -1752,11 +1742,6 @@ button {
         width: 112%;
         top: 0px;
         left: -10px;
-    }
-    .visual::after {
-        top: 380px;
-        width: 75px;
-        height: 120px;
     }
     .visual__subtitle {
         font-size: 7vw;
@@ -1893,19 +1878,14 @@ button {
         bottom: 40px;
     }
     .benefits {
-        padding: 135px 0 120px;
+        padding: 87px 0 120px;
     }
     .cart__box {
         margin-top: 69px;
         gap: 75px 30px;
     }
-    .visual::after {
-        top: 23%;
-        width: 67px;
-        height: 100px;
-    }
-    .visual::before {
-        top: -90px;
+    .visual__title {
+        padding-top: 80px;
     }
     .visual__title {
         margin-bottom: 55px;
@@ -1926,6 +1906,13 @@ button {
     .visual__btn-2 {
         font-size: 13px;
         height: 55px;
+    }
+    .footer::after {
+        width: 78px;
+        height: 165px;
+    }
+    .footer__title {
+        padding-top: 100px;
     }
     .footer__subtitle-form {
         margin-bottom: 38px;
@@ -1980,7 +1967,7 @@ button {
         height: 54px;
     }
     .footer::after {
-        top: -146px;
+        top: -45px;
         width: 85px;
         height: 144px;
     }
