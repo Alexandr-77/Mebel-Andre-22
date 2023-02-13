@@ -1,48 +1,13 @@
-$('.class-mi').slick({
-   dots: true,
-   infinite: true,
-   speed: 300,
-   slidesToShow: 4,
-   slidesToScroll: 4,
-   responsive: [
-     {
-       breakpoint: 1024,
-       settings: {
-         slidesToShow: 3,
-         slidesToScroll: 3,
-         infinite: true,
-         dots: true
-       }
-     },
-     {
-       breakpoint: 600,
-       settings: {
-         slidesToShow: 2,
-         slidesToScroll: 2
-       }
-     },
-     {
-       breakpoint: 480,
-       settings: {
-         slidesToShow: 1,
-         slidesToScroll: 1
-       }
-     }
-   ]
- });
-
-
-// ================================================== 
+let burgerBlock = document.querySelector('.header__burger');
 let burger = document.querySelector('.burger');
+
 let nav = document.querySelector('.header__block-nav');
 
+burgerBlock.addEventListener('click', miFunction);
 
-burger.addEventListener('click', rotateBurger); 
-
-function rotateBurger() {
-  
+function miFunction() {
   burger.classList.toggle('burger-active');
-
+  
   if (nav.style.display === "block") {
     nav.style.display = "none";
   } else {
@@ -51,65 +16,76 @@ function rotateBurger() {
 
 }
 
-// ===========================================
+// ===============================================================
+$('.slyder__box').slick({
+  dots: false,
+  infinite: true,
+  speed: 300,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  responsive: [
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        infinite: true,
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1
+      }
+    }
 
-let popapClose = document.querySelector('.popap__close');
-let popap = document.querySelector('.popap');
-let btnForma = document.querySelector('.header__main-btn');
-let btnFormaOtpravit = document.querySelector('.popap__btn');
-
-popapClose.addEventListener('click', closeF);
-btnForma.addEventListener('click', open);
-btnFormaOtpravit.addEventListener('click', otravka);
-
-function closeF() {
-  popap.style.display = "none";
-  console.log(popap);
-}
-function open() {
-  popap.style.display = "block";
-}
-function otravka() {
-  popap.style.display = "none";
-}
-
-
-// ===============================================
-// отправка формы =============>
-$(document).ready(function() {
-
-	//E-mail Ajax Send
-	$("form").submit(function() { //Change
-		var th = $(this);
-		$.ajax({
-			type: "POST",
-			url: "mail.php", //Change
-			data: th.serialize()
-		}).done(function() {
-			alert("Thank you!");
-			setTimeout(function() {
-				// Done Functions
-				th.trigger("reset");
-			}, 1000);
-		});
-		return false;
-	});
-
+  ]
 });
 
+/////////////////////////////////
+$('.materials__slyder').slick({
+  dots: false,
+  infinite: true,
+  speed: 300,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  responsive: [
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        infinite: true,
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+
+  ]
+});
+
+// ===============================================================
+
+let accordioBlockClick = document.querySelectorAll('.accordion__box-top');
+let accordionHidden = document.querySelectorAll('.accordion__box-hidden');
 
 
-
-
-
-
-// ===================================
-
-// let animationNum = document.querySelector('#reliably__box');
-
-// animationNum.addEventListener('click', showAnimation);
-
-// function showAnimation() {
+for (let i = 0; i < accordioBlockClick.length; i++) { 
+  accordioBlockClick[i].onclick = function () {
+		accordionHidden[i].classList.toggle('accordion__box-hidden--active');
+		accordioBlockClick[i].classList.toggle('accordion__box-top--active');
+	} 
   
-// }
+}
+
+
+
+// ===============================================================
+
 
